@@ -1,38 +1,99 @@
-.App {
+:root {
+  --dark-bg-color: #1e1d2b;
+  --light-bg-color: #2b2c3e;
+  --lightest-bg-color: #03a9f4;
+  --default-text-color: #d1d1d1;
+  --default-button-color: #1177f6;
+  /* --dark-bg-color: #1b262c;
+  --light-bg-color: #0f4c75;
+  --lightest-bg-color: #3282b8;
+  --default-text-color: #bbe1fa; */
+}
+
+body {
+  margin: 0;
+}
+
+.clipboard-shell {
+  background-color: var(--dark-bg-color);
+  color: var(--default-text-color);
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+}
+
+.header {
+  background-color: var(--lightest-bg-color);
+  color: var(--dark-bg-color);
+  display: flex;
+  padding: 1rem 0.5rem;
+}
+
+.empty-icon-container {
+  height: 100%;
+  display: flex;
+}
+
+.empty-icon > img {
+  margin: auto;
+}
+
+.empty-icon {
+  margin: auto;
+}
+
+.empty-icon-text {
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-title {
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.history {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem 0.5rem;
+  height: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.history-list {
+  margin-top: 0.15rem;
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.history-title {
+  display: flex;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.history-title > img {
+  margin-right: 0.2rem;
+}
+
+.history-item {
+  background-color: var(--light-bg-color);
+  margin: 0.5rem 0 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: flex;
+}
+
+.history-item-text {
+  width: 95%;
+}
+
+.copy-icon-container {
+  width: 5%;
+}
+
+.copy-icon {
+  cursor: pointer;
+}
+
+.history-item:first-child {
+  margin-top: 0;
 }
